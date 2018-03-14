@@ -1,0 +1,12 @@
+div{
+	border:10px solid blue;
+	width: 1200px !important;
+	height: 500px;
+}
+.clr{
+	background-color: crimson !important;
+	color: #fff !important;
+}
+.wid70Per{
+	width: 70% !important;
+}
