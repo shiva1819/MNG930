@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		#header{
+			width:100%;
+			background-color: #ccc;
+		}
+		.fL{
+			float: left;
+		}
+		.fR{
+			float: right;
+		}
+		#logo{
+			width:20%;
+			line-height: 50px;
+			text-align: center;
+			/*background-color: lime;*/
+		}
+		#menu{
+			width:80%;
+			/*background-color: crimson;*/
+		}
+		#menu ul{
+			list-style-type:none;
+			float: right;
+		}
+		#menu ul li{
+			float: left;
+			width:100px;
+			margin-left: 1px;
+			text-align: center;
+			line-height: 50px;
+			background-color: #eee;
+		}
+		#menu ul li a{
+			text-decoration: none;
+			color: #000;
+		}
+		li.active{
+			background: #4e3e3e !important;
+		}
+		li.active a{
+			color: #fff !important;
+		}
+		.clearfix{
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<div id="logo" class="fL">
+			<h1> MY LOGO </h1>
+		</div>
+		<div id="menu" class="fL">
+			<ul>
+				<li class="active">
+					<a href="#"> HOME </a>	
+				</li>
+				<li>
+					<a href="#"> ABOUT </a>	
+				</li>
+				<li>
+					<a href="#"> GALLERY </a>	
+				</li>
+				<li>
+					<a href="#"> SERVICES </a>	
+				</li>
+				<li>
+					<a href="#"> CONTACT </a>	
+				</li>
+				<div class="clearfix"></div>
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</body>
+</html>
