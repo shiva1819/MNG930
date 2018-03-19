@@ -2,10 +2,19 @@
 <html>
 <head>
 	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,900" rel="stylesheet">
 	<style type="text/css">
 		*{
 			margin: 0px;
 			padding: 0px;
+			font-family: 'Titillium Web', sans-serif;
+		}
+		#headerMain{
+			height: 100vh;
+			background-image: url(images/bg1.jpg);
+			background-repeat: no-repeat;
+			background-attachment: fixed;	
+
 		}
 		#header{
 			width:100%;
@@ -49,12 +58,26 @@
 		li.active a{
 			color: #fff !important;
 		}
+
+
+		#welcomeNote{
+			/*font-family:;*/
+			width:600px;
+			margin:200px auto; 
+			font-size: 40px;
+			text-align: center;
+			color: #fff;
+			/*font-style: italic;*/
+			font-variant:	 small-caps;
+			font-weight:600; /*100-900*/
+		}
 		.clearfix{
 			clear: both;
 		}
 	</style>
 </head>
 <body>
+	<div id="headerMain">
 	<div id="header">
 		<div id="logo" class="fL">
 			<h1> MY LOGO </h1>
@@ -80,6 +103,11 @@
 			</ul>
 		</div>
 		<div class="clearfix"></div>
+	</div>
+
+		<div id="welcomeNote">
+			I am Decoz a Graphic Designer based in New York, specializing in User Interface 			
+		</div>
 	</div>
 </body>
 </html>
