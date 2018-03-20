@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		p{
+			width:500px;
+			/*letter-spacing: 50px;*/
+			/*word-spacing: 40px;*/
+			text-align: justify;
+			/* before, after first-line, first-letter, selection*/
+		}
+		p:first-line{
+			color: red;
+		}
+		p:first-letter{
+			font-size: 40px;
+			font-style: italic;
+		}
+		h2{
+			width:300px;
+			line-height: 50px;
+			background-color: #aaa;
+			color: #fff;
+			margin: auto;
+			text-align: center;
+			position: relative;
+		}
+		h2:before{
+			content: "";
+			position: absolute;
+			width:100px;
+			height: 5px;
+			background-color: #aaa !important;
+			left: -120px;
+			top: 45%;
+		}
+		h2::after{
+			content: "";
+			position: absolute;
+			width:100px;
+			height: 5px;
+			background-color: #aaa !important;
+			right: -120px;
+			top: 45%;
+		}
+		::selection{
+			color: red;
+			background-color: #000;
+		}
+
+	</style>
+</head>
+<body>
+	<p>
+		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+	</p>
+	<h2> DEVELOPMENT </h2>
+</body>	
+</html>
