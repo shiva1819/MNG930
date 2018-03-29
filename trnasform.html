@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		ul li{
+			width:200px;
+			height: 200px;
+			display: inline-block;
+			margin-left: 100px;
+			margin-top:150px;
+			box-shadow: 0px 0px 5px 0px #000;
+			vertical-align: middle;
+			transition: 1s;
+		}
+
+		#scale:hover{
+			/*margin-top: 200px;*/
+			transform: scale3d(1.5,1.5,1);
+		}
+		#rotate{
+			transform: rotate(0deg);
+		}
+		#rotate:hover{
+			transform: rotate(180deg) scale(1.5,1.5) translate(100px,100px);
+			/*border-radius: 50%;*/
+		}
+		#translate:hover{
+			transform: translateZ(200px);
+		}
+		#skew{
+			/*border:50px solid;*/
+			transform: skewX(45deg);
+			position: absolute;
+			left: -300px;
+			top: -200px;
+			width:1024px;
+			height: 150vh;
+			background-color: lime;z-index: -111;
+		}
+		#skew:hover{
+			transform: skewX(45deg);
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li id="scale">
+			scale
+		</li>
+		<li id="rotate">
+			rotate
+		</li>
+		<li id="translate">
+			translate
+		</li>
+		<li id="skew">
+			skew
+		</li>
+	</ul>
+</body>
+</html>
