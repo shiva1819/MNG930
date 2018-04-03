@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#main{
+			width:300px;
+			height: 300px;
+			border:1px solid red;
+			margin:50px 40px;
+		}
+		#card{
+			width:100%;
+			height: 100%;
+			background-color: #ccc;
+			position: relative;
+			transition: 1s;
+			transform-style: preserve-3d;
+		}
+		.cardI{
+			width:100%;
+			height: 100%;
+			text-align: center;
+			line-height: 300px;
+			background-color: lime;
+			position: absolute;
+			backface-visibility: hidden;
+
+		}
+		#side_A{
+			background-color: lime;
+			color: #fff;
+			z-index: 1;
+			transform: rotateX(0deg);
+		}
+		#side_B{
+			background-color: crimson;
+			color: #fff;
+			transform: rotateX(180deg);
+			line-height: 20px;
+			text-align: justify;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+
+		#main:hover #card{
+			transform: rotateX(180deg);
+		}
+		h2{
+			margin: 0px;
+			padding: 0px;
+		}
+
+		#scale_wrap{
+			width:300px;
+			height: 300px;
+			border:2px solid #000;
+			position: relative;
+			overflow: hidden;
+		}
+		#scale_item{
+			width:100%;
+			height: 100%;
+			position: absolute;
+			background-color: lightblue;
+			background: url(images/sca.jpg) no-repeat;
+			background-size: cover;
+			text-align: center;
+			line-height: 300px;
+			transition: 1s;
+		}
+		#scale_wrap:hover #scale_item{
+			transform: scale(1.5,1.5s);
+		}
+	</style>
+</head>	
+<body>
+	<div id="main">
+		<div id="card">
+			<div id="side_A" class="cardI">
+				<h2> BOOK 1</h2>
+			</div>
+			<div id="side_B" class="cardI">
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+			</div>
+		</div>
+	</div>
+	
+	<div id="scale_wrap">
+		<div id="scale_item" class="">
+			SCALE ITEM
+		</div>
+	</div>
+</body>
+</html>
