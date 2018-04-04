@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		/* max-width: -- dektop to mobile */
+		/* min-width: -- mobile to desktop */
+
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		#one{
+			width:74.96339677891654%; /* 1024px */
+			margin: 100px auto;
+			/*line-height: 50px;*/
+		}
+		#one h1{
+			background-color: lime;
+			margin-top: 10px;
+			display: none;
+		}
+		h1#desk{
+			display: block;
+		}
+
+		@media screen and (min-width: 1024px){
+			h1{
+				display: none !important;
+				background-color: crimson !important;
+			}			
+			h1#tab{
+				display: block !important;
+			}
+		}
+		@media screen and (min-width: 768px){
+			h1, h1#tab{
+				display: none !important;
+				background-color: crimson !important;
+			}
+			#one{
+				width:100% !important;
+			}			
+			h1#mob{
+
+				display: block !important;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="one"> <!-- 1024px -->
+		<h1 id="mob"> <!-- 1024px -->
+			<div>Mobile</div> <!-- 500px --> 
+		</h1>
+		<h1 id="tab"> Tab </h1>
+		<h1 id="desk"> Desktop </h1>
+	</div>
+</body>
+</html>
