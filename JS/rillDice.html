@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		// d1,d2
+
+		var d1 = prompt('Please guess a number b/w 1-6');
+		var d2 = prompt('Please guess a number b/w 1-6');
+		var guessNum = parseInt(d1) + parseInt(d2); // 8
+
+		alert('your Guess Number is ' + guessNum);
+
+
+		var ranNum = Math.ceil(Math.random() * 6);
+
+		alert('your random number is ' + ranNum)
+
+		if(guessNum == ranNum){
+			alert('Great.. you got the number...')
+		}else{
+			alert('sorry.. you did not got the number...')
+		}
+
+
+
+//		var ans = ['Shiva', 30, 5000];
+		var obj = {
+			name:"shiva",			
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

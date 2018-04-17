@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+
+	<script type="text/javascript">
+		var arr = [];
+
+			// arr[0] = "someX";
+
+			arr.push('one');
+			arr.push('two');
+			arr.push('three');
+
+			arr.pop();
+			// arr.pop();
+			// arr.pop();
+
+
+
+			arr.unshift('zero');
+			arr.shift();
+
+
+
+			// console.log(arr);
+
+			var someEx = [20,15,25,27,28,16];
+
+			someEx = arr.concat(someEx);
+
+
+			console.log(someEx);
+			// delete someEx[1];
+			// someEx.splice(1,4);
+
+			someEx = someEx.join('~');
+
+			console.log(someEx);
+
+			someEx = someEx.split('~');
+
+			console.log(someEx)
+
+
+			var filt = [];
+
+
+			for (var i = 0; i < someEx.length; i++) {
+				if( someEx[i] > 25){
+					filt.unshift(someEx[i]);
+				}
+			}
+
+			// console.log(filt);
+
+
+
+
+
+	</script>
+</body>	
+</html>
