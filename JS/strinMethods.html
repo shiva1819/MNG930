@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		// search, indexOf, lastIndexOf, replace, split, slice, substring, substr, rehEx(global), toUpperCase, toLowerCase.
+
+
+		var Link = "file:///C:/Users/Indira%20Shivaprasad/Desktop/Session/MNG930/MNG930/JS/strinMethods.html/strinMethods/strinMethods";
+
+		// converting into Array.
+		console.log(Link.split('/'));
+
+
+				console.log(Link.search('strinMethods'));
+		console.log(Link.indexOf('strinMethods', 72));
+		console.log(Link.lastIndexOf('strinMethods'));
+
+
+		// regEx global
+		console.log(Link.indexOf('strinMethods') != -1 ? Link.replace(/strinMethods/g, 'ArrayMethods').toUpperCase():Link.replace('strinMethods', 'strinMethods')); 
+
+		// slice(start, end)
+
+			console.log(Link.indexOf('strinMethods') + 'strinMethods.html'.length)
+
+			var pageLink = Link.slice(Link.indexOf('strinMethods'), Link.indexOf('strinMethods') + 'strinMethods.html'.length);
+
+			console.log(pageLink.toLowerCase());
+
+
+
+		console.log(Link.slice(Link.indexOf('strinMethods'), Link.indexOf('strinMethods') + 'strinMethods.html'.length));
+
+
+
+		// substring(start,end)
+		console.log(Link.substring(Link.indexOf('strinMethods'), Link.indexOf('strinMethods') + 'strinMethods.html'.length));
+
+		// substr(start,length)
+		console.log(Link.substr(Link.indexOf('strinMethods'), 'strinMethods.html'.length));
+
+	</script>
+</body>
+</html>
