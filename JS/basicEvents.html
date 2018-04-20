@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<button type="button" onclick="demo()"> Check </button>
+
+	<h2 onmouseleave="demo()"> CLick  </h2>
+
+	<script type="text/javascript">
+
+		function demo(){
+			var date = new Date();
+
+			var day = date.getDay();
+
+			switch(day){
+				case 0:
+					day = "sunday"
+					break;
+				case 1:
+					day = "Monday"
+					break;
+				case 2:
+					day = "Tuesday"
+					break;
+				case 3:
+					day = "Wednesday"
+					break;
+				case 4:
+					day = "Thursday"
+					break;
+				case 5:
+					day = "Friday"
+					break;
+				case 6:
+					day = "Satarday"
+					break;
+			}
+
+			alert(day);
+
+
+		}
+	</script>
+</body>	
+</html>

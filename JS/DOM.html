@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#one{
+			width:200px;
+			height: 400px;
+			background: lime;
+			display: none;
+		}
+	</style>
+</head>
+<body>	
+	<div id="one" class="one">
+		ONE
+	</div>
+	<div>
+		some dummy..
+	</div>
+	<div id="two" onclick="test()">
+		TWO
+	</div>
+	<div id="three" class="one">
+		THREE
+	</div>
+
+	<script type="text/javascript">
+		// element, class, id.
+
+
+		// var One = document.getElementById('one');
+		// var One = document.getElementsByClassName('one')[1];
+		var One = document.getElementsByTagName('div')[1] ;
+		One.innerHTML = "<ul><li> One </li> <li> Two </li></ul>";
+
+
+		var DivOne = document.getElementById('one');
+
+
+		// element.style.cssproperty = cssvalue;
+
+		function test(){
+			DivOne.style.display = "block";
+		}
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
