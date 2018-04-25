@@ -1,0 +1,121 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Raleway', sans-serif;
+}
+/*#logo{
+	width:15%;
+	line-height: 40px;
+	text-align: center;
+}*/
+#main{
+	height: 100vh;
+	background: url(bg.jpg) no-repeat;
+	background-size: cover;
+}
+#menu{
+	width:15%;
+	height: 100vh;
+	background: #305f67a3;
+	float: left;
+}
+#logo{
+	width:100%;
+	padding-top: 50px;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+#logo h2{
+	color: #fff;
+	line-height: 50px;
+	font-size: 2em;
+}
+.subMenu{
+	margin-top: 100px;
+	text-align: center;
+}
+.subMenu li{
+	line-height: 40px;
+}
+.subMenu li a{
+	color: #fff;
+	text-decoration: none;
+}
+#work{
+	float: left;
+	width: 85%;
+}
+#details{
+	width:75%;
+	margin: auto;
+	background: #305f67a3;
+	margin-top: 20px;
+	min-height: 500px;
+	padding: 35px 15px 15px 15px;
+	box-sizing: border-box;
+}
+.inputWrap{
+	width:80%;
+	padding: 10px;
+	margin: auto;
+	box-sizing: border-box;
+}
+
+.inputWrap label, input,select{
+	padding: 5px;
+	border:1px solid #fff;
+	box-sizing: border-box;
+	font-size: 18px;
+}
+.inputWrap label{
+	display: block;
+	width:20%;
+	padding-bottom: 6px;
+	color: #fff;
+	padding: 10px;
+}
+.inputWrap input,select{
+	min-width:100%;
+	line-height: 22px;
+}
+.inputWrap button{
+	width:100px;
+	line-height: 40px;
+	text-align: center;
+	border:1px solid #fff;
+	font-size: 18px;
+}
+.inputWrap button#save{
+	background: #4ee24e;
+}
+.inputWrap button#reset{
+	background: #41acdc;	
+}
+.gender{
+	width:80%;
+	padding: 10px;
+	margin: auto;
+	box-sizing: border-box;	
+}
+input[type="radio"]{
+	width:18px;
+	height: 18px;
+}
+.gender h3{
+	margin: 10px;
+	display: block;
+	width:20%;
+	padding-bottom: 6px;
+	color: #fff;
+	padding: 10px;
+	border:1px solid;
+}
+#Dashboard{
+	display: none;
+}
+.clear{
+	clear: both;
+}
+
+

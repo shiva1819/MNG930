@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Project </title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+</head>
+<body>
+	<div id="main">
+
+		<div id="menu">
+			<div id="logo">
+				<h2> U<span class="red">I</span> </h2>
+			</div>
+			<ul class="subMenu">
+				<li>
+					<a href="#Newuser"> New User</a>
+				</li>
+				<li>
+					<a href="#Dashboard">Dashboard</a>
+				</li>				
+			</ul>
+		</div>
+		<div id="work">
+			<div id="Newuser">
+				<div id="details">
+					<div class="inputWrap">
+						<label for="name"> <i class="fas fa-user"></i> Name </label>
+						<input type="text" name="name" id="username">
+					</div>
+					<div class="inputWrap">
+						<label for="name"> <i class="fas fa-phone-square"></i> Contact </label>
+						<input type="text" name="name" id="contact">
+					</div>
+					<div class="inputWrap">
+						<label for="name"> <i class="fas fa-envelope-square"></i> Email </label>
+						<input type="text" name="name" id="email">
+					</div>
+					<div class="inputWrap">
+						<label for="name"> <i class="fas fa-building"></i> Compnay </label>
+						<select name="company" id="company">
+							<option value="empty"> -- Please choose one -- </option>
+							<option value="Microsoft"> Microsoft </option>
+							<option value="Microsoft"> Infosys </option>
+							<option value="Microsoft"> Wipro </option>
+							<option value="Microsoft"> Honeywell </option>
+							<option value="Microsoft"> CA </option>
+
+						</select>
+					</div>
+					<div class="gender">
+						<h3 for="name"> <i class="fas fa-key"></i> Gender </h3>
+						<input type="radio" name="Gender" class="gend" value="male"> Male 
+						<input type="radio" name="Gender" class="gend" value="female"> Female 
+					</div>	
+					<div class="inputWrap" id="btnWrap">
+						<button type="button" id="save"> Save </button><button type="button" id="reset"> Reset </button>
+					</div>
+				</div>
+			</div>
+			<div id="Dashboard">
+				<ul id="addName">
+					<li>
+						HOME 
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
