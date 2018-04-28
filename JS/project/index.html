@@ -16,16 +16,16 @@
 			</div>
 			<ul class="subMenu">
 				<li>
-					<a href="#Newuser"> New User</a>
+					<a href="#Newuser" id="Newuserbtn"> New User</a>
 				</li>
 				<li>
-					<a href="#Dashboard">Dashboard</a>
+					<a href="#Dashboard" id="Dashboardbtn">Dashboard</a>
 				</li>				
 			</ul>
 		</div>
 		<div id="work">
 			<div id="Newuser">
-				<div id="details">
+				<div class="details">
 					<div class="inputWrap">
 						<label for="name"> <i class="fas fa-user"></i> Name </label>
 						<input type="text" name="name" id="username">
@@ -43,10 +43,10 @@
 						<select name="company" id="company">
 							<option value="empty"> -- Please choose one -- </option>
 							<option value="Microsoft"> Microsoft </option>
-							<option value="Microsoft"> Infosys </option>
-							<option value="Microsoft"> Wipro </option>
-							<option value="Microsoft"> Honeywell </option>
-							<option value="Microsoft"> CA </option>
+							<option value="Infosys"> Infosys </option>
+							<option value="Wipro"> Wipro </option>
+							<option value="Honeywell"> Honeywell </option>
+							<option value="CA"> CA </option>
 
 						</select>
 					</div>
@@ -61,11 +61,52 @@
 				</div>
 			</div>
 			<div id="Dashboard">
-				<ul id="addName">
-					<li>
-						HOME 
-					</li>
+				<ul id="countWrap">
+					<li> Total Count <span id="tcount"> 10 </span></li>
+					<li> Total Count of Male <span id="mcount"> 5 </span></li>
+					<li> Total Count of Female <span id="fcount"> 5 </span></li>
 				</ul>
+				<div class="details">
+					<table>
+						<thead>
+							<tr>
+								<th>Name </th>
+							
+								<th> Contact </th>
+							
+								<th> Email </th>
+							
+								<th> Company </th>
+							
+								<th> Gender </th>
+								<th> Actions </th>
+							</tr>
+						</thead>
+						<tbody id="datatoPopulate">
+							<tr>
+								<td>
+									SHIVA
+								</td>
+								<td>
+									0708098089
+								</td>
+								<td>
+									shiva@gmail.com
+								</td>
+								<td>
+									Wipro
+								</td>
+								<td>
+									Male
+								</td>
+								<td>
+									<button type="button"> EDIT </button>
+									<button type="button"> Delete </button>
+								</td>
+							</tr>	
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 		<div class="clear"></div>

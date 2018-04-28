@@ -46,7 +46,7 @@
 	float: left;
 	width: 85%;
 }
-#details{
+.details{
 	width:75%;
 	margin: auto;
 	background: #305f67a3;
@@ -113,6 +113,34 @@ input[type="radio"]{
 }
 #Dashboard{
 	display: none;
+}
+
+#countWrap{
+	width:75%;
+	margin:20px auto;
+}
+#countWrap li{
+	display: inline-block;
+	width:30%;
+	border:1px solid #fff;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 600;
+	padding: 10px;
+}
+
+.details table{
+	width:100%;
+	color: #fff;
+}
+.details table,tr,td,th{
+	border-bottom: 1px solid #fff;
+	border-collapse: collapse;
+	text-align: center;
+}
+.details table, td,th{
+	padding: 10px;
 }
 .clear{
 	clear: both;
