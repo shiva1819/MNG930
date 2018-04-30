@@ -70,16 +70,32 @@ save.addEventListener('click', function(){
 	var edit = document.createElement('button');
 		edit.innerHTML = '<i class="fas fa-edit"></i>';
 
+		// class attribute 
+		// ele.setAttribute('attrName', 'attrValue');
+		// ele.attrName = value;
+
+		edit.className = "edit";
+
 
 	var del = document.createElement('button');
 		del.innerHTML = '<i class="far fa-window-close"></i>';
+		del.className = "del";
 
 		actionsTd.appendChild(edit);
 		actionsTd.appendChild(del);
 
 
 		edit.onclick = function(){
-			alert();
+			
+
+
+			
+		}
+
+		del.onclick = function(){
+			// console.log(this);
+			var removeItem = this.parentNode.parentNode;
+			datatoPopulate.removeChild(removeItem);
 		}
 
 	NameTd.innerText = Nameval;
@@ -96,7 +112,6 @@ save.addEventListener('click', function(){
 */
 	// parent.appendChild(child);
 
-
 	tr.appendChild(NameTd);
 	tr.appendChild(contactTd);
 	tr.appendChild(emailTd);
@@ -105,6 +120,19 @@ save.addEventListener('click', function(){
 	tr.appendChild(actionsTd);
 	console.log(tr);
 	datatoPopulate.appendChild(tr);
+
+
+	Name.value = "";
+	contact.value = "";
+	company.value = "empty";
+	email.value = "";
+
+	for (var i = 0; i < gender.length; i++) {
+		gender[i].checked = false
+	}
+
+
+
 }, false);
 	
 
