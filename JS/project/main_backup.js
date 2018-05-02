@@ -7,9 +7,8 @@ Dashboard = document.getElementById('Dashboard');
 
 var Nuserbtn = document.getElementById('Newuserbtn');
 var Dashboardbtn = document.getElementById('Dashboardbtn');
-var Male = document.getElementById('male');
-var feMale = document.getElementById('female');
-var update = document.getElementById('update');
+
+
 
 Nuserbtn.onclick = function(){
 	Nuser.style.display = "block";
@@ -86,82 +85,84 @@ save.addEventListener('click', function(){
 		actionsTd.appendChild(edit);
 		actionsTd.appendChild(del);
 
+		var EditName,EditContact,EditEmail,EditCompany,EditGender,parentEle;
 
 		edit.onclick = function(){
 
 			Nuser.style.display = "block";
 			Dashboard.style.display = "none";
 
-
+			save.style.display = "none";
 			update.style.display = 'inline';
-			save.style.display = 'none';
 
-			var editEle = this.parentNode.parentNode.children;
+			var parentTest = this.parentNode.parentNode;
+			parentEle = this.parentNode.parentNode.children
+			console.log(this.parentNode.parentNode.children);
 
-			Name.value = editEle[0].innerText;
-			contact.value = editEle[1].innerText;
-			email.value = editEle[2].innerText;
-			company.value = editEle[3].innerText;
+			EditName = parentEle[0].innerText;
+			EditContact = parentEle[1].innerText;
+			EditEmail = parentEle[2].innerText;
+			EditCompany = parentEle[3].innerText;
+			EditGender = parentEle[4].innerText;
 
 
-			if(editEle[4].innerText == 'male'){
-				Male.checked = true;
+			Name.value = EditName;
+			contact.value = EditContact;
+			company.value = EditCompany;
+			email.value = EditEmail;
+
+			var gendMale = document.getElementById('male');
+			var gendFeMale = document.getElementById('female');
+
+			if(EditGender == "male"){	
+				gendMale.checked = true;
 			}else{
-				feMale.checked = true;
+				gendFeMale.checked = true;
 			}
 
 			update.onclick = function(){
 
-				editEle[0].innerText = Name.value;
-				editEle[1].innerText = contact.value;
-				editEle[2].innerText = email.value;
-				editEle[3].innerText = company.value;
-
-				if(Male.checked == true){
-					editEle[4].innerText = "male";
-				}else{
-					editEle[4].innerText = "female";
-				}
+			EditName = Name.value;
+			EditContact = contact.value;
+			EditCompany = company.value;
+			EditEmail = email.value;
 
 
-				alert('your Information is updated...');
-
-				Name.value = ""
-				contact.value = ""
-				company.value = "empty"
-				email.value = ""
-				for (var i = 0; i < gender.length; i++) {
-					gender[i].checked = false
-				}
-
-
-				save.style.display = 'inline';
-				update.style.display = 'none';
-
-
-				Nuser.style.display = "none";
-				Dashboard.style.display = "block";
-				
-
+			for (var i = 0; i < gender.length; i++) {
+				if(gender[i].checked == true){
+					EditGender = gender[i].value;
+				}				
 			}
 
 
+			parentEle[0].innerText = EditName;
+			parentEle[1].innerText = EditContact;
+			parentEle[2].innerText = EditEmail;
+			parentEle[3].innerText = EditCompany;
+			parentEle[4].innerText = EditGender;
 
-		/*
-			for (var i = 0; i < gender.length; i++) {
-				if(editEle[4].innerText == "male"){
-					gender[0].checked = true;
-				}else{
-					gender[1].checked = true;
-				}	
-			}*/
+			Name.value = "";
+	contact.value = "";
+	company.value = "empty";
+	email.value = "";
+
+	for (var i = 0; i < gender.length; i++) {
+		gender[i].checked = false
+	}
 
 
+			Nuser.style.display = "none";
+			Dashboard.style.display = "block";
 
+			save.style.display = "inline";
+			update.style.display = 'none';
+			
+
+			}
 		}
 
 		del.onclick = function(){
-			console.log(this);
+			// console.log(this);
 			var removeItem = this.parentNode.parentNode;
 			datatoPopulate.removeChild(removeItem);
 		}
@@ -189,7 +190,6 @@ save.addEventListener('click', function(){
 	console.log(tr);
 	datatoPopulate.appendChild(tr);
 
-	alert('Information saved to Dashboard')
 
 	Name.value = "";
 	contact.value = "";

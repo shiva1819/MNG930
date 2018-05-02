@@ -26,6 +26,7 @@
 		<div id="work">
 			<div id="Newuser">
 				<div class="details">
+					<form autocomplete="off">
 					<div class="inputWrap">
 						<label for="name"> <i class="fas fa-user"></i> Name </label>
 						<input type="text" name="name" id="username">
@@ -52,12 +53,13 @@
 					</div>
 					<div class="gender">
 						<h3 for="name"> <i class="fas fa-key"></i> Gender </h3>
-						<input type="radio" name="Gender" class="gend" value="male"> Male 
-						<input type="radio" name="Gender" class="gend" value="female"> Female 
+						<input type="radio" name="Gender" class="gend" value="male" id="male"> Male 
+						<input type="radio" name="Gender" class="gend" value="female" id="female"> Female 
 					</div>	
 					<div class="inputWrap" id="btnWrap">
-						<button type="button" id="save"> Save </button><button type="button" id="reset"> Reset </button>
+						<button type="button" id="save"> Save </button><button type="button" id="update"> Update </button><button type="button" id="reset"> Reset </button>
 					</div>
+					</form>
 				</div>
 			</div>
 			<div id="Dashboard">
