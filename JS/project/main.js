@@ -1,6 +1,7 @@
 var Name, Contact, Company, Email, Gender, save, reset, Nuser, Dashboard;
 
 var datatoPopulate = document.getElementById('datatoPopulate');
+datatoPopulate.innerHTML = "<tr><td colspan='6'> No records found </td></tr>";
 
 Nuser = document.getElementById('Newuser');
 Dashboard = document.getElementById('Dashboard');
@@ -10,6 +11,11 @@ var Dashboardbtn = document.getElementById('Dashboardbtn');
 var Male = document.getElementById('male');
 var feMale = document.getElementById('female');
 var update = document.getElementById('update');
+
+// var totalCount = 0;
+var maleCOunt = 0;
+var feMaleCount = 0;
+var tcount = "";
 
 Nuserbtn.onclick = function(){
 	Nuser.style.display = "block";
@@ -33,6 +39,7 @@ var update = document.getElementById('update');
 update.style.display = "none";
 
 var btnWrap = document.getElementById('btnWrap');
+tcount = document.getElementById('tcount');
 
 // ele.addEventListener('evetName', cb);
 
@@ -43,6 +50,10 @@ var btnWrap = document.getElementById('btnWrap');
 */
 var arr = [];
 save.addEventListener('click', function(){
+
+	if(datatoPopulate.firstChild.innerText.indexOf('No records found') > -1){
+		datatoPopulate.removeChild(datatoPopulate.children[0]);
+	}
 	
 	var Nameval = Name.value;
 	var Contactval = contact.value;
@@ -86,8 +97,52 @@ save.addEventListener('click', function(){
 		actionsTd.appendChild(edit);
 		actionsTd.appendChild(del);
 
+	NameTd.innerText = Nameval;
+	contactTd.innerText = Contactval;
+	companyTd.innerText = Companyval;
+	emailTd.innerText = Emailval;
+	genderTd.innerText = Genderval;
 
-		edit.onclick = function(){
+	/*console.log(NameTd);
+	console.log(contactTd);
+	console.log(companyTd);
+	console.log(emailTd);
+	console.log(genderTd);
+*/
+	// parent.appendChild(child);
+
+	tr.appendChild(NameTd);
+	tr.appendChild(contactTd);
+	tr.appendChild(emailTd);
+	tr.appendChild(companyTd);
+	tr.appendChild(genderTd);
+	tr.appendChild(actionsTd);
+	console.log(tr);
+	datatoPopulate.appendChild(tr);
+
+	alert('Information saved to Dashboard')
+
+	Name.value = "";
+	contact.value = "";
+	company.value = "empty";
+	email.value = "";
+
+	for (var i = 0; i < gender.length; i++) {
+		gender[i].checked = false
+	}
+
+
+console.log(datatoPopulate.children);
+totalCount = datatoPopulate.children.length;
+
+
+
+tcount.innerText = totalCount;
+
+
+
+
+edit.onclick = function(){
 
 			Nuser.style.display = "block";
 			Dashboard.style.display = "none";
@@ -164,43 +219,14 @@ save.addEventListener('click', function(){
 			console.log(this);
 			var removeItem = this.parentNode.parentNode;
 			datatoPopulate.removeChild(removeItem);
+
+			tcount.innerText = datatoPopulate.children.length;
+			// totalCount.innerText = tcount;
+
+			if(datatoPopulate.children.length == 0){
+				datatoPopulate.innerHTML = "<tr><td colspan='6'> No records found </td></tr>"
+			}
 		}
-
-	NameTd.innerText = Nameval;
-	contactTd.innerText = Contactval;
-	companyTd.innerText = Companyval;
-	emailTd.innerText = Emailval;
-	genderTd.innerText = Genderval;
-
-	/*console.log(NameTd);
-	console.log(contactTd);
-	console.log(companyTd);
-	console.log(emailTd);
-	console.log(genderTd);
-*/
-	// parent.appendChild(child);
-
-	tr.appendChild(NameTd);
-	tr.appendChild(contactTd);
-	tr.appendChild(emailTd);
-	tr.appendChild(companyTd);
-	tr.appendChild(genderTd);
-	tr.appendChild(actionsTd);
-	console.log(tr);
-	datatoPopulate.appendChild(tr);
-
-	alert('Information saved to Dashboard')
-
-	Name.value = "";
-	contact.value = "";
-	company.value = "empty";
-	email.value = "";
-
-	for (var i = 0; i < gender.length; i++) {
-		gender[i].checked = false
-	}
-
-
 
 }, false);
 	
