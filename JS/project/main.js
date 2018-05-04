@@ -51,6 +51,11 @@ tcount = document.getElementById('tcount');
 var arr = [];
 save.addEventListener('click', function(){
 
+	// debugger;
+	if(formVal() != "success"){
+
+	}else{
+
 	if(datatoPopulate.firstChild.innerText.indexOf('No records found') > -1){
 		datatoPopulate.removeChild(datatoPopulate.children[0]);
 	}
@@ -227,14 +232,36 @@ edit.onclick = function(){
 				datatoPopulate.innerHTML = "<tr><td colspan='6'> No records found </td></tr>"
 			}
 		}
+		}
 
 }, false);
 	
-
 	
 
-// ele.onclick = cb();
 
+var NameReg = /^[a-zA-Z]+$/g
+
+function formVal(){
+	
+	if(Name.value == "" || !NameReg.test(Name.value)){
+		alert('Please Enter Your name....');
+		return false;
+	}else if(contact.value == ""){
+		alert('Please Enter Your COntact number....')
+		return false;
+	}else if(email.value == ""){
+		alert('Please Enter Your Email....')
+		return false;
+	}else if( company.value == "empty"){
+		alert('Please Choose Your Company....')
+		return false;
+	}else if(male.checked == false && female.checked == false){
+		alert('Please Select Your gender....')
+		return false;
+	}else{
+		return 'success';
+	}	
+}
 
 
 
