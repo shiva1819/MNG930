@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			transition: 1s;
+		}
+	</style>
+</head>
+<body>
+	<div id="demo">
+		<img src="Three.jpg">
+	</div>
+	<script type="text/javascript">
+		var count = 1;
+		// img1, img2, img3
+		var img1 = "one.jpg";
+		var img2 = "Two.jpg";
+		var img3 = "Three.jpg";
+
+		var demo = document.getElementById('demo');
+			var img = document.createElement('img');
+			
+			demo.appendChild(img);
+			img.style.opacity = 0;
+			var Src= "";
+		setInterval(function(){
+			// console.log("img"+count);
+			
+			if(count == 1){
+				Src = img1;
+			}else if(count == 2){
+				Src = img2
+			}else if(count == 3){
+				Src = img3;
+			}
+
+			demo.children[0].style.display = "none";
+			img.style.opacity = 1;
+			img.src = Src;
+
+			count++
+			if(count > 3){
+				count = 1;
+			}
+		},2000);
+
+	</script>	
+</body>
+</html>

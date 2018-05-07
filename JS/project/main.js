@@ -239,14 +239,14 @@ edit.onclick = function(){
 	
 
 
-var NameReg = /^[a-zA-Z]+$/g
+var NameReg = /^[a-zA-Z ]{3,}$/;
+var contactReg = /^[0-9]{10}$/;
 
-function formVal(){
-	
-	if(Name.value == "" || !NameReg.test(Name.value)){
+function formVal(){	
+	if(!NameReg.test(Name.value)){
 		alert('Please Enter Your name....');
 		return false;
-	}else if(contact.value == ""){
+	}else if(!contactReg.test(contact.value)){
 		alert('Please Enter Your COntact number....')
 		return false;
 	}else if(email.value == ""){
