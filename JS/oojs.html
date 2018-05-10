@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<!-- Encapsulation, polymorphism, Hoisting, Closure, Constructor, prototype, Prototype Inheritance, isPrototypeOf, hasOwnProperty -->
+
+
+
+	<script type="text/javascript">
+		var a; // Hoisting...
+
+
+		// var ar = [];
+		// var ar = new Array();
+		
+		// clousre...
+		function sum(a){
+
+			function num(b){
+				console.log(a + b);
+			}
+			
+			num(20);
+		}
+		
+		sum(10);
+
+		var obj = {}
+		obj.a = function(){
+			return 10;
+		}
+
+		obj.b = function(){
+			return this.a() + 20;
+		}
+
+console.log(obj);
+
+// construnctor function.
+	
+	function person(name, age){
+		this.Name = name;
+		this.Age = age;
+	}
+
+
+	function payment(salary){
+		this.salary = salary;
+	}
+
+
+
+
+	var person1 = new person('Shiva', 30);
+	person.prototype.salary = 3000;
+	console.log(person1);
+
+	var person2 = new person('Prasad', 32);
+	person.prototype.salary = 5000;
+	console.log(person2.salary);
+	
+
+	payment.prototype = person1;
+	var pay1 = new payment(5999);
+
+	console.log(pay1.salary);
+	console.log(pay1.Name);
+
+
+	// To know the Property has its own values.
+	person1.hasOwnProperty('salary') // false;
+	person1.hasOwnProperty('Name') // true;
+
+	// to Check what is the Prototype for an instanse.
+	payment.prototype.isPrototypeOf(pay1);
+
+
+
+	// Encapsulation;
+	// var abc = 20;
+	var ef = (function(){
+		var abc = 10;
+		var def = 30;
+		alert(abc);
+		return { abc: abc, def:def};
+	});
+
+	ef();
+	// console.log(abc);
+	console.log(ef().abc);
+
+
+
+
+	</script>
+
+</body>
+</html>

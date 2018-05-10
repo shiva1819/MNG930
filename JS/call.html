@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		// Call, Apply , Bind
+
+
+		var obj = {name:"Shiva"};
+
+		function demo(age,salary){
+			return this.name + "-" + age +"-"+ salary;
+		}
+		
+		// CALL - string/ individual
+		// console.log(demo.call(obj, 30, 5000));
+
+		// APPLY - array
+		var arr = [30,5000];
+		// console.log(demo.apply(obj, arr));
+
+
+		// BIND - binding it to function.
+		var def = demo.bind(obj);
+		console.log(def(30,5000));
+
+	</script>
+</body>
+</html>
