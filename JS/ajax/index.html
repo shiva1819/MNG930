@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <ul id="ulist">
+      
+      </ul>
+    <script>
+//  AJAX
+        
+        var xhtp = new XMLHttpRequest();
+            
+            xhtp.onload = function(){
+                    if(xhtp.readyState == 4 && xhtp.status == 200){
+                        console.log(JSON.parse(xhtp.responseText));    
+//                        var Data = xhtp.responseText);
+                        DataBinding(xhtp.responseText)
+                    }
+            }
+                    
+        //open
+            xhtp.open('GET', "https://jsonplaceholder.typicode.com/users" , true);    
+        
+        //send
+            xhtp.send();
+        
+        
+        
+        function DataBinding(data){
+            data = JSON.parse(data);
+            var UL = document.getElementById('ulist');
+            var li = "";
+            for(var i in data){
+                li += "<li>" + data[i].name +"</li>"
+            }
+            
+            UL.innerHTML = li;
+        }
+        
+    </script>
+  </body>
+</html>
