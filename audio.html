@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		#vid{
+			width:1300px;
+			height: 100vh;
+		}
+	</style>
+</head>
+<body>
+	<audio controls muted loop autoplay>
+		<source src="aud.mp3" type="audio/mpeg">
+	</audio>
+
+	<video id="vid">
+		<source src="vid.mp4" type="video/mp4">
+	</video>
+	<button id="btn"> Play </button>
+	<button id="btn1"> pause </button>
+
+	<script type="text/javascript">
+		var vid  = document.getElementById('vid');
+		var btn = document.getElementById('btn');
+		var btn1 = document.getElementById('btn1');
+
+			btn.onclick = function(){
+				vid.play();
+			}
+			btn1.onclick = function(){
+				vid.pause();
+			}
+	</script>
+</body>
+</html>

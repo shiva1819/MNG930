@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#drop{
+			width:500px;
+			height: 300px;
+			border:1px solid;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- dropItem -->
+
+	<div id="drop" ondragover="allow(event)" ondrop="drop(event)"></div>
+
+	<!-- dragItem -->
+	<img src="images/one.png" id="dragItem" ondragstart="drag(event)" draggable="true">
+	<script type="text/javascript">
+		function allow(ev){
+			ev.preventDefault();
+			console.log(ev);
+		}
+
+		function drag(ev){
+			// ev.preventDefault();
+			console.log(ev);
+
+			// set
+
+
+		}
+
+		function drop(ev){
+			ev.preventDefault();
+
+			// get, append to drop
+		}
+
+
+
+	</script>
+</body>
+</html>
