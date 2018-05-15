@@ -10,7 +10,7 @@
 		}
 	</style>
 </head>
-<body>
+<body id="dropa" ondragover="allow(event)" ondrop="drop(event)">
 
 	<!-- dropItem -->
 
@@ -18,29 +18,28 @@
 
 	<!-- dragItem -->
 	<img src="images/one.png" id="dragItem" ondragstart="drag(event)" draggable="true">
+	<img src="images/one.png" id="dragItem1" ondragstart="drag(event)" draggable="true">
+
 	<script type="text/javascript">
 		function allow(ev){
 			ev.preventDefault();
-			console.log(ev);
+			// console.log(ev);
 		}
 
 		function drag(ev){
 			// ev.preventDefault();
 			console.log(ev);
-
+			ev.dataTransfer.setData('dragItems', ev.target.id);
 			// set
-
-
 		}
-
 		function drop(ev){
 			ev.preventDefault();
 
 			// get, append to drop
+			var Id = ev.dataTransfer.getData('dragItems');
+			console.log(Id);
+			ev.target.appendChild(document.getElementById(Id));		
 		}
-
-
-
 	</script>
 </body>
 </html>
