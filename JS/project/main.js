@@ -49,8 +49,9 @@ tcount = document.getElementById('tcount');
 }, false);
 */
 var arr = [];
-save.addEventListener('click', function(){
+var localArr = localStorage.getItem("dataInfo") || [];
 
+save.addEventListener('click', function(){
 	// debugger;
 	if(formVal() != "success"){
 
@@ -75,6 +76,19 @@ save.addEventListener('click', function(){
 		}
 	}
 	console.log(Genderval);
+
+
+
+
+	var obj = {"name":Nameval, "contact":Contactval, "company": Companyval, "Email":Emailval, "gender": Genderval}
+
+	// console.log(localArr);
+	obj = JSON.stringify(obj);
+	
+	// localArr.push(obj);
+
+	localStorage.setItem('dataInfo', localArr);
+
 
 	var tr = document.createElement('tr');
 
