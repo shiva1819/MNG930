@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<title></title>
+	<style type="text/css">
+		.one{
+			font-style: italic;
+		}
+		.two{
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	
+	<div> Hi </div>
+
+	<script type="text/javascript">
+
+		// text(), html(), .css(), attr(), removeAttr(), addClass(), removeClass().
+
+		var jq = $.noConflict(); // preserve/reset to key
+		console.log(jq('div').html()); // get Inner text of DIV		
+
+		// text(), html();
+
+		var cont = 'New text'
+		$('div').html(cont);
+		$('div').append(' - text 123');
+		$('div').prepend(" text 012 - ")
+
+		$('div').css({
+			'background':"red",
+			"color":"#fff",
+			width:"400px",
+			height:"300px"
+		});
+
+		$('div').attr('id', "one");
+		$('div').attr('data-test', "test");
+		$('div').removeAttr('data-test');
+
+
+		$('div').addClass('one two');
+
+		$('div').removeClass('two');
+
+
+
+	</script>
+</body>
+</html>

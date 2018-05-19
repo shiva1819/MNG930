@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<canvas width="300" height="300" style="border: 1px solid red;" id="can">
+		Your Browser is not supporting Canvas..
+	</canvas>
+
+	<script type="text/javascript">
+		var can = document.getElementById('can');
+		var ctx = can.getContext('2d');
+
+
+		console.log(ctx);
+		ctx.fillStyle = "red";
+
+		/*ctx.fillRect(10,10,280,280);
+		ctx.clearRect(20,20,260,260);
+
+*/
+		var x = 20;
+		var y = 20;
+
+		setInterval(function(){
+
+		ctx.beginPath();
+		ctx.moveTo(20,20);
+		ctx.lineTo(x,y);
+		ctx.strokeStyle = "red";
+		ctx.lineWidth = "10";
+		ctx.stroke();
+
+		x+=10;
+		y+=10;
+
+		if( x > 260 && y > 260){
+			x = 260;
+			y = 260;
+
+		}
+
+		}, 100)
+
+		/*ctx.beginPath();
+		// ctx.moveTo(100,100);
+		ctx.fillStyle = 'blue';
+		ctx.arc(100,100, 40, 0, 0.5*Math.PI);
+		ctx.fill();
+		
+		ctx.font = '48px serif';
+		ctx.fillText("Shiva",50,50);
+		ctx.fill();*/
+
+	</script>
+</body>
+</html>

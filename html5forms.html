@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form>
+		<input type="text" name="">
+		<input type="email" name="" required> <br>
+		<input type="range" name="" min="0" max="255" id="range">
+		<input type="number" name="">s
+		<input type="date" name="">
+		<input type="file" name="">
+		<input type="search" name="">
+		<button> click </button>
+	</form>
+	<script type="text/javascript">
+		var range = document.getElementById('range');
+		var body = document.getElementsByTagName('body')[0];
+		range.onchange = function(){
+			// alert();
+			console.log(this.value);
+
+			body.style.background = "rgb(" + this.value +"," + this.value + "," + this.value +")";
+		}
+	</script>
+</body>
+</html>

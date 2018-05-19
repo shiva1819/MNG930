@@ -48,10 +48,20 @@ tcount = document.getElementById('tcount');
 	alert('wrap..');
 }, false);
 */
-var arr = [];
-var localArr = localStorage.getItem("dataInfo") || [];
+// var arr = [];
+
+
+var localArr = JSON.parse(localStorage.getItem('dataInfo')) || [];
+console.log(JSON.parse(localStorage.getItem('dataInfo')));
+var DataBind = JSON.parse(localStorage.getItem('dataInfo'));
+
+for(var i in DataBind){
+	console.log("<li>" + DataBind[i].name + "</li>");
+}
 
 save.addEventListener('click', function(){
+
+
 	// debugger;
 	if(formVal() != "success"){
 
@@ -79,15 +89,11 @@ save.addEventListener('click', function(){
 
 
 
-
 	var obj = {"name":Nameval, "contact":Contactval, "company": Companyval, "Email":Emailval, "gender": Genderval}
+	localArr.push(obj);
+	localStorage.setItem('dataInfo', JSON.stringify(localArr));
 
-	// console.log(localArr);
-	obj = JSON.stringify(obj);
-	
-	// localArr.push(obj);
 
-	localStorage.setItem('dataInfo', localArr);
 
 
 	var tr = document.createElement('tr');
