@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<ul id="dataTable">
+		
+	</ul>
+	<script type="text/javascript">
+		// Ajax, SPA.
+
+		var Li = "";
+		$.ajax({
+			url:"https://jsonplaceholder.typicode.com/users",
+			method:"GET",
+			dataType:'JSON',
+			success:function(data){
+				
+				console.log(data);
+				for(var i = 0; i < data.length; i++){
+					Li += "	<li>" + data[i].name +"</li>"
+				}
+
+				$('#dataTable').html(Li);
+
+			},
+			error:function(err){
+				if(err.statusText == "error"){
+					alert('something went wrong...');
+				}
+			}
+		});
+	</script>
+</body>
+</html>
