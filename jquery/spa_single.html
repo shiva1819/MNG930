@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		.item{
+			height: 100vh;
+			padding-top: 50px;
+		}
+		ul li{
+			display: inline-block;
+			line-height: 50px;
+		}
+		ul{
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			width:100%;
+			background: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li> <a href="#Home"> Home </a></li>
+		<li> <a href="#About"> About </a></li>
+		<li> <a href="#Gallery"> Gallery </a></li>
+		<li> <a href="#Contact"> Contact </a></li>
+	</ul>
+
+
+	<div id="Home" class="item">
+		HOME
+	</div>
+
+	<div id="About" class="item">
+		ABOUT
+	</div>
+
+	<div id="Gallery" class="item">
+		GALLERY
+	</div>
+
+	<div id="Contact" class="item">
+		CONTACT
+	</div>
+
+	<script type="text/javascript">
+		$('ul li a').click(function(){
+
+			var ele = $(this).attr('href');
+
+			// console.log($('#Contact').offset().top + "px");
+
+			$('body, html').animate({scrollTop:$(ele).offset().top + "px"});
+		})
+	</script>
+</body>
+</html>

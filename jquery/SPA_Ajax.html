@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style> h1{ background-color: crimson; }</style>
+</head>
+<body>
+
+	<ul id="menu">
+		<li> <a href="#"> HOME </a> </li>
+		<li> <a href="#"> ABOUT </a> </li>
+        <li> <a href="#"> CONTACT </a> </li>
+    </ul>
+    <div id="content">
+    	
+    </div>
+    
+	<script type="text/javascript">
+		// Ajax, SPA.
+
+        $('ul li a').click(function(e){
+            e.preventDefault();
+            var url = $(this).text().trim().toLocaleLowerCase();
+                url = url+".html";
+                spafn(url);
+        })
+        
+        
+        function spafn(url){
+                $.ajax({
+                    url:url,
+                    method:"GET",
+                    success:function(data){
+                        console.log(data);
+
+                        $('#content').html(data);
+
+                    },
+                    error:function(err){
+                        if(err.statusText == "error"){
+                            alert('something went wrong...');
+                        }
+                    }
+                });
+            }
+	</script>
+</body>
+</html>
